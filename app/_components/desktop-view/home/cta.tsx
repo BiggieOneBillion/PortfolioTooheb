@@ -1,9 +1,11 @@
 "use client";
 import ImageLoader from "@/components/image-loader";
 import { BlurOverlay } from "@/components/ui/blur-overlay";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import FadeInViewDemo, {
   FadeInView,
 } from "@/components/ui/fade-in-when-in-view";
+import { LinkPreview } from "@/components/ui/link-preview";
 import { useHomeContentStore } from "@/store/home-data-store";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
@@ -16,7 +18,7 @@ export default function CTA() {
     <>
       <BlurOverlay duration={1} blurAmount={20}>
         <FadeInView>
-          <div className="min-h-screen bg-[#e8e4dc] flex gap-10 items-center justify-center p-8">
+          <div className="min-h-screen bg-[#e8e4dc]y flex gap-10 items-center justify-center p-8">
             <div className="w-[90%] w-fully grid grid-cols-12  gap-5">
               {/* Left Image */}
               <div className="col-span-3 py-10 relative">
@@ -27,11 +29,15 @@ export default function CTA() {
                   delay={0.5}
                 >
                   <div className="image-con overflow-hidden h-full">
-                    <img
+                    <DirectionAwareHover imageUrl={leftImage}>
+                      <p className="font-bold text-xl">In the mountains</p>
+                      <p className="font-normal text-sm">$1299 / night</p>
+                    </DirectionAwareHover>
+                    {/* <img
                       src={leftImage}
                       alt="Couple sitting together"
                       className="w-full h-full object-cover"
-                    />
+                    /> */}
                   </div>
                 </FadeInView>
               </div>
@@ -39,13 +45,30 @@ export default function CTA() {
               {/* Center Content */}
               <div className="col-span-6 bg-[#c7ceb0] p-16 flex flex-col justify-center">
                 <h1 className="text-5xl w-[500px] mx-auto font-serif text-[#4a4a3d] mb-16 text-center leading-tight">
-                  {/* Croatia Photography
-            <br />
-            Services for Travelers */}
                   {heading}
                 </h1>
 
                 <div className="space-y-10">
+                  {services.map((el, i) => (
+                    <li
+                      key={uuidv4()}
+                      className="py-3 border-b list-none text-center"
+                    >
+                      <LinkPreview url={el.img}>
+                        <div className="text-flip flex flex-col">
+                          <span className="text-3xl font-light text-black/50 span-one">
+                            {el.title}
+                          </span>
+                          <span className="text-sm font-lighty text-black/30 span-two">
+                            {el.description}
+                          </span>
+                        </div>
+                      </LinkPreview>
+                    </li>
+                  ))}
+                </div>
+
+                {/* <div className="space-y-10">
                   {services.map((el, index) => (
                     <div key={uuidv4()} className="text-center">
                       <FadeInView
@@ -65,7 +88,7 @@ export default function CTA() {
                       </FadeInView>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Contact Button */}
                 <div className="flex justify-center mt-12">
@@ -87,12 +110,17 @@ export default function CTA() {
                   delay={0.5}
                 >
                   <div className="image-con overflow-hidden h-full">
-                    <img
+                    <DirectionAwareHover imageUrl={rightImage}>
+                      <p className="font-bold text-xl">In the mountains</p>
+                      <p className="font-normal text-sm">$1299 / night</p>
+                    </DirectionAwareHover>
+
+                    {/* <img
                       // src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=800&fit=crop"
                       src={rightImage}
                       alt="Woman at sunset"
                       className="w-full h-full object-cover"
-                    />
+                    /> */}
                   </div>
                 </FadeInView>
               </div>

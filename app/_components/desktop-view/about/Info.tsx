@@ -1,5 +1,6 @@
 "use client";
 
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import { FadeIn } from "@/components/ui/fade-in-animation";
 import { FadeInView } from "@/components/ui/fade-in-when-in-view";
 import { useAboutContentStore } from "@/store/about-data-store";
@@ -93,18 +94,26 @@ export default function Info() {
         {/* Right Image Column */}
         <div className="relative">
           <div className="w-[60%] h-[80%] image-con overflow-hidden">
-            <img
+             <DirectionAwareHover imageUrl={images[0]}>
+              <p className="font-bold text-xl">In the mountains</p>
+              <p className="font-normal text-sm">$1299 / night</p>
+            </DirectionAwareHover>
+            {/* <img
               src={images[0]}
               alt="Croatian architecture with bell tower"
               className="w-full h-full object-cover py-20"
-            />
+            /> */}
           </div>
           <div className="w-[60%] absolute bottom-0 right-0 z-10 h-[70%] object-cover py-20 image-con overflow-hidden">
-            <img
+            <DirectionAwareHover imageUrl={images[1]}>
+              <p className="font-bold text-xl">In the mountains</p>
+              <p className="font-normal text-sm">$1299 / night</p>
+            </DirectionAwareHover>
+            {/* <img
               src={images[1]}
               alt="Croatian architecture with bell tower"
               className="w-full h-full object-cover"
-            />
+            /> */}
           </div>
         </div>
       </div>

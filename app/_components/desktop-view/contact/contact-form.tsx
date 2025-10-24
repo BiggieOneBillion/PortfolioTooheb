@@ -5,6 +5,7 @@ import { useContactContentStore } from "@/store/contact-data-store";
 import { FadeInView } from "@/components/ui/fade-in-when-in-view";
 import { v4 as uuidv4 } from "uuid";
 import { FadeIn } from "@/components/ui/fade-in-animation";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 const courierPrime = Courier_Prime({
   subsets: ["latin"],
@@ -73,14 +74,18 @@ export default function ContactSection() {
       <div className="w-[90%] mx-auto grid grid-cols-2 gap-0">
         {/* Left Image Column */}
         <div className="relative image-con overflow-hidden">
-          <img
+          <DirectionAwareHover imageUrl={contactContent?.desktop.image}>
+            <p className="font-bold text-xl">In the mountains</p>
+            <p className="font-normal text-sm">$1299 / night</p>
+          </DirectionAwareHover>
+          {/* <img
             src={
               contactContent?.desktop.image ||
               "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=1200&fit=crop"
             }
             alt="Coastal scene with boat and mountains"
             className="w-full h-full object-cover grayscale"
-          />
+          /> */}
         </div>
 
         {/* Right Content Column */}

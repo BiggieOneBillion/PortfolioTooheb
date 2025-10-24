@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/image-reveal-card";
 import FadeInDemo, { FadeIn } from "@/components/ui/fade-in-animation";
 import ImageLoader from "@/components/image-loader";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
@@ -56,13 +57,17 @@ export default function HeroSectionDesktop({
             {/* left small image */}
             <div className="order-1 lg:order-none flex justify-center lg:justify-start">
               <FadeIn delay={0.6}>
-                <div className="w-[260px] lg:w-[280px] image-con">
-                  <img
+                <div className="w-[260px] h-96 lg:w-[280px] image-con">
+                  <DirectionAwareHover imageUrl={leftImage}>
+                    <p className="font-bold text-xl">In the mountains</p>
+                    <p className="font-normal text-sm">$1299 / night</p>
+                  </DirectionAwareHover>
+                  {/* <img
                     src={leftImage}
                     alt="left image"
                     className="w-full object-cover rounded-sm shadow-md"
                     style={{ aspectRatio: "2/3" }}
-                  />
+                  /> */}
                 </div>
               </FadeIn>
             </div>
@@ -80,13 +85,17 @@ export default function HeroSectionDesktop({
             {/* right small image */}
             <div className="order-3 lg:order-none flex justify-center lg:justify-end">
               <FadeIn delay={0.6}>
-                <div className="w-[260px] lg:w-[280px] image-con">
-                  <img
+                <div className="w-[260px] h-96 lg:w-[280px] image-con">
+                  <DirectionAwareHover imageUrl={rightImage}>
+                    <p className="font-bold text-xl">In the mountains</p>
+                    <p className="font-normal text-sm">$1299 / night</p>
+                  </DirectionAwareHover>
+                  {/* <img
                     src={rightImage}
                     alt="right image"
                     className="w-full object-cover rounded-sm shadow-md"
                     style={{ aspectRatio: "2/3" }}
-                  />
+                  /> */}
                 </div>
               </FadeIn>
             </div>
