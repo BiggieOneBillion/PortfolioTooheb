@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import data from "../../../../data/home.json";
-import { HomePageContent } from "@/lib/models/page-content.model";
-import connectDB from "@/lib/mongodb";
 
 export async function GET() {
   try {

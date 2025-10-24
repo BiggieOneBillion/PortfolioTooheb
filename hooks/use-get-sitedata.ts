@@ -17,7 +17,6 @@ const useGetSiteData = () => {
     queryKey: ["home-content"],
     queryFn: async () => {
       const response = await apiClient.get("/content/home");
-      console.log("HOME DATA", response.data.data);
       return response.data.data;
     },
     staleTime: 100000,

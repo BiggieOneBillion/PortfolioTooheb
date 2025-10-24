@@ -1,6 +1,4 @@
 import { type NextRequest, NextResponse } from "next/server";
-import connectDB from "@/lib/mongodb";
-import { ContactPageContent } from "@/lib/models/page-content.model";
 import data from "../../../../data/contact.json";
 
 export async function GET() {
