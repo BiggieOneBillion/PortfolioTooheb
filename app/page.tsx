@@ -1,7 +1,12 @@
 "use client";
-import { HomeDataContextProvider } from "@/context/home-data-context";
 import HomeIndex from ".";
+import InfoAnimation from "./_components/desktop-view/shared-ui/intro-animation";
 
 export default function Home() {
-  return <HomeIndex />;
+  return (
+    <>
+      <HomeIndex />
+      {/* <InfoAnimation /> */}
+    </>
+  );
 }

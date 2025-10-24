@@ -5,6 +5,7 @@ import HomeViewDesktop from "./_components/desktop-view/home";
 import { useHomeData } from "@/context/home-data-context";
 import { useHomeContentStore } from "@/store/home-data-store";
 import useGetSiteData from "@/hooks/use-get-sitedata";
+import InfoAnimation from "./_components/desktop-view/shared-ui/intro-animation";
 
 const HomeIndex = () => {
   const { isLoadingHomeData, homeData } = useGetSiteData();
@@ -15,15 +16,15 @@ const HomeIndex = () => {
     return <p className="w-full text-center">Loading....</p>;
   }
 
-  setHomeContent(homeData);
+  setHomeContent(homeData || {});
 
   return (
     <>
       <section>
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <HomeView />
         </div>
-        <div className="hidden md:block">
+        <div className="hidden xl:block">
           <HomeViewDesktop />
         </div>
       </section>

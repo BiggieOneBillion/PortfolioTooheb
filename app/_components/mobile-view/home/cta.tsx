@@ -2,6 +2,8 @@ import React from "react";
 import { services } from "./data/services-data";
 import { Work_Sans, Vollkorn } from "next/font/google";
 import { useHomeContentStore } from "@/store/home-data-store";
+import { FadeInView } from "@/components/ui/fade-in-when-in-view";
+import { v4 as uuidv4 } from "uuid";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -29,14 +31,16 @@ const CTA = () => {
         {heading}
       </header>
       <ul className="space-y-10">
-        {services.map((el) => (
-          <li
-            key={el.description}
-            className={`space-y-3 text-center ${workSans.className} antialiased text-[#363636] font-medium`}
-          >
-            <h3 className="font-semibold">{el.title}</h3>
-            <p className="leading-[25px]">{el.description}</p>
-          </li>
+        {services.map((el, i) => (
+          <FadeInView key={uuidv4()} direction="down" delay={(i + 0.5) / 10}>
+            <li
+              key={el.description}
+              className={`space-y-3 text-center ${workSans.className} antialiased text-[#363636] font-medium`}
+            >
+              <h3 className="font-semibold">{el.title}</h3>
+              <p className="leading-[25px]">{el.description}</p>
+            </li>
+          </FadeInView>
         ))}
       </ul>
     </section>

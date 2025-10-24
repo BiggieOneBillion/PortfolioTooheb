@@ -14,6 +14,7 @@ export async function GET(req: Request) {
     await connectDB();
 
     const existingAdmin = await Admin.find();
+    
     if (existingAdmin && existingAdmin.length > 0) {
       return NextResponse.json({ message: "Admin already exists" });
     }

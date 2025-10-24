@@ -27,6 +27,8 @@ export default function Info() {
     return <p>Getting data....</p>;
   }
 
+  console.log("ABOUT DATA", aboutContent)
+
   const { heading, subtitle, paragraphs, whyChooseMe, images } =
     aboutContent!.mobile!;
   return (

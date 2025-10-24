@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   const sessionToken = request.cookies.get(COOKIE_NAME)?.value
 
-  console.log(sessionToken)
+  // console.log(sessionToken)
 
   // Define protected routes
   const isAdminDashboard = pathname.startsWith("/admin/dashboard")

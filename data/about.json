@@ -1,0 +1,50 @@
+{
+  "_id": {
+    "$oid": "68f478b1b24ef0f13a09e141"
+  },
+  "mobile": {
+    "heading": "Meet Your Photographer with steeze",
+    "subtitle": "Abuja Photographer with steeze",
+    "images": [
+      "https://picsum.photos/1000/1000?random=101",
+      "https://picsum.photos/1000/1000?random=102"
+    ],
+    "paragraphs": [
+      "Hi, I'm Maria — a passionate photographer with over 7 years of professional experience behind the lens. I've photographed everything from weddings and fashion to travel adventures and underwater worlds, but my greatest joy lies in capturing real, human moments—especially here in my beautiful home, Croatia.",
+      "When I'm not behind the camera, you'll probably find me kite-surfing, diving, sailing, or exploring the coastlines by bike. I'm also a proud homeowner and firm believer that life is best enjoyed with good people, good stories, and a bit of gelato (which I usually have on my face!).",
+      "My style is relaxed, natural, and storytelling-focused. I'll guide you gently during the session to help you feel comfortable—whether it's a couples shoot on the beach, a surprise proposal, or a family session with kids running wild in the waves.",
+      "Let's create something beautiful together—and make your time in Croatia truly unforgettable."
+    ],
+    "whyChooseMe": {
+      "heading": "Why Choose Me:",
+      "points": [
+        "Local Photographer in Abuja, Global Quality — I know the best times, locations, and lighting.",
+        "Fluent in English and Italian for smooth communication.",
+        "Relaxed and natural posing guidance.",
+        "Fast delivery with professionally edited images.",
+        "Over 700 happy couples, families, and travelers photographed!",
+        "Available also for weddings, events, and commercial shoots."
+      ],
+      "closingText": "Let's make your Croatia photoshoot unforgettable. Tell me your travel dates, location, and the type of session you're dreaming of and I'll take care of the rest."
+    }
+  },
+  "desktop": {
+    "heading": "Meet Your Photographer",
+    "subtitle": "Croatia Family Engagement and Wedding Photographer",
+    "images": [
+      "https://picsum.photos/1000/1000?random=201",
+      "https://picsum.photos/1000/1000?random=202"
+    ],
+    "paragraphs": [
+      "Hi, I'm Mario – a passionate photographer with over 17 years of professional experience behind the lens. I've photographed everything from weddings and fashion to travel adventures and underwater worlds, but my greatest joy is capturing real, human moments—especially here in my beautiful home, Croatia.",
+      "When I'm not behind the camera, you'll probably find me kitesurfing, diving, sailing, or exploring the coastline by bike. I'm also a proud homebrewer and a firm believer that life is best enjoyed with good people, good stories, and a big smile (which I usually have on my face!).",
+      "My style is relaxed, natural, and storytelling-focused. I'll guide you gently during the session so you feel comfortable, while keeping things fun and easy—whether it's a couple's shoot on the beach, a surprise proposal, or a family session with kids running wild in the waves.",
+      "Let's create something beautiful together—and make your time in Croatia truly unforgettable."
+    ],
+    "whyChooseMe": {
+      "heading": "Why Choose Me:",
+      "text": "Local Photographer in Croatia, Global Quality. I know the best locations, light, and timing to make your photos truly special. I use top-tier gear and techniques to ensure stunning, high-resolution images that stand the test of time. Personalized Experience Tailored to You — every session is custom designed to fit your style, preferences, and story. I take the time to get to know you and understand your vision, so we can create photos that truly reflect who you are."
+    }
+  },
+  "updatedAt": "2025-10-14T17:00:00.000Z"
+}

@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { Courier_Prime, Vollkorn, Work_Sans } from "next/font/google";
 import { useContactContentStore } from "@/store/contact-data-store";
+import { FadeInView } from "@/components/ui/fade-in-when-in-view";
+import { v4 as uuidv4 } from "uuid";
+import { FadeIn } from "@/components/ui/fade-in-animation";
 
 const courierPrime = Courier_Prime({
   subsets: ["latin"],
@@ -35,8 +38,26 @@ export default function ContactSection() {
     });
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+  const handleSubmit = async () => {
+    try {
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", dateLocation: "", message: "" });
+      } else {
+        alert("❌ Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Something went wrong.");
+    }
   };
 
   const contactContent = useContactContentStore(
@@ -51,9 +72,8 @@ export default function ContactSection() {
     <div className="min-h-screen bg-[#ede4d2]">
       <div className="w-[90%] mx-auto grid grid-cols-2 gap-0">
         {/* Left Image Column */}
-        <div className="relative">
+        <div className="relative image-con overflow-hidden">
           <img
-            // src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=1200&fit=crop"
             src={
               contactContent?.desktop.image ||
               "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=1200&fit=crop"
@@ -65,42 +85,37 @@ export default function ContactSection() {
 
         {/* Right Content Column */}
         <div className="py-20 px-16 flex flex-col justify-center">
-          <h1
-            className={`text-4xl text-center font-serif text-[#4a6b7c] mb-4 ${vollkorn.className} antialiased text-[#30586C]`}
-          >
-            {/* Get in touch / Ask a question */}
-            {contactContent?.desktop.heading}
-          </h1>
+          <FadeIn direction="down">
+            <h1
+              className={`text-4xl text-center font-serif text-[#4a6b7c] mb-4 ${vollkorn.className} antialiased text-[#30586C]`}
+            >
+              {/* Get in touch / Ask a question */}
+              {contactContent?.desktop.heading}
+            </h1>
+          </FadeIn>
           <aside
             className={`${workSans.className} antialiased text-[#363636] font-medium`}
           >
             <div className="space-y-6 text-[#3d3d3d] text-center mb-12">
-              {contactContent?.desktop.paragraphs.map((el) => (
-                <p className="leading-relaxed text-[15px]">{el}</p>
+              {contactContent?.desktop.paragraphs.map((el, i) => (
+                <FadeInView
+                  key={uuidv4()}
+                  direction="up"
+                  distance={30}
+                  delay={i * 0.15}
+                  duration={0.6}
+                  threshold={0.5}
+                >
+                  <p key={el} className="leading-relaxed text-[15px]">
+                    {el}
+                  </p>
+                </FadeInView>
               ))}
-              {/* <p className="leading-relaxed text-[15px]">
-                Whether you're planning a romantic escape, a family holiday, or
-                a once-in-a-lifetime celebration in beautiful Croatia — I'd love
-                to hear from you!
-              </p>
-
-              <p className="leading-relaxed text-[15px]">
-                Tell me a bit about your story, your plans, and the kind of
-                photos you're dreaming of. I'll get back to you as soon as
-                possible with all the info you need.
-              </p>
-
-              <p className="leading-relaxed text-[15px]">
-                Just fill out the contact form or drop me a message — let's
-                create something beautiful together.
-              </p>
-
-              <p className="leading-relaxed text-[15px]">
-                Available all along the coast and the islands.
-              </p> */}
-              <p className="leading-relaxed font-medium text-[15px]">
-                I can't wait to capture your moments!😎
-              </p>
+              <FadeIn delay={0.6}>
+                <p className="leading-relaxed font-medium text-[15px]">
+                  I can't wait to capture your moments!😎
+                </p>
+              </FadeIn>
             </div>
           </aside>
 

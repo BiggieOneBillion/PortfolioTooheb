@@ -4,6 +4,15 @@ import { Vollkorn, Courier_Prime, Work_Sans } from "next/font/google";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { useHomeData } from "@/context/home-data-context";
 import { useHomeContentStore } from "@/store/home-data-store";
+import { ImageThreeDCard } from "@/components/3d-image-card";
+import { WobbleCard } from "@/components/ui/wobble-card";
+import {
+  ImageRevealCard,
+  ImageRevealCardDescription,
+  ImageRevealCardTitle,
+} from "@/components/ui/image-reveal-card";
+import FadeInDemo, { FadeIn } from "@/components/ui/fade-in-animation";
+import ImageLoader from "@/components/image-loader";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
@@ -46,63 +55,63 @@ export default function HeroSectionDesktop({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* left small image */}
             <div className="order-1 lg:order-none flex justify-center lg:justify-start">
-              <div className="w-[260px] lg:w-[280px]">
-                <img
-                  src={leftImage}
-                  alt="left image"
-                  className="w-full object-cover rounded-sm shadow-md"
-                  style={{ aspectRatio: "2/3" }}
-                />
-              </div>
+              <FadeIn delay={0.6}>
+                <div className="w-[260px] lg:w-[280px] image-con">
+                  <img
+                    src={leftImage}
+                    alt="left image"
+                    className="w-full object-cover rounded-sm shadow-md"
+                    style={{ aspectRatio: "2/3" }}
+                  />
+                </div>
+              </FadeIn>
             </div>
 
-            {/* center large image */}
-            <div className="order-2  lg:order-none flex justify-center">
-              <div className="w-full max-w-[720px]">
-                <img
-                  src={centerImage}
-                  alt="center image"
-                  className="w-full h-[500px] object-cover rounded-sm shadow-md"
-                  style={{ aspectRatio: "4/3" }}
-                />
-              </div>
-            </div>
+            <section className="order-2  lg:order-none flex justify-center">
+              <FadeIn delay={0.8} duration={0.5}>
+                <ImageRevealCard
+                  baseImage={centerImage}
+                  revealImage={leftImage}
+                  height={600}
+                ></ImageRevealCard>
+              </FadeIn>
+            </section>
 
             {/* right small image */}
             <div className="order-3 lg:order-none flex justify-center lg:justify-end">
-              <div className="w-[260px] lg:w-[280px]">
-                <img
-                  src={rightImage}
-                  alt="right image"
-                  className="w-full object-cover rounded-sm shadow-md"
-                  style={{ aspectRatio: "2/3" }}
-                />
-              </div>
+              <FadeIn delay={0.6}>
+                <div className="w-[260px] lg:w-[280px] image-con">
+                  <img
+                    src={rightImage}
+                    alt="right image"
+                    className="w-full object-cover rounded-sm shadow-md"
+                    style={{ aspectRatio: "2/3" }}
+                  />
+                </div>
+              </FadeIn>
             </div>
           </div>
 
           {/* Heading & text */}
           <div className="mt-12 lg:mt-16 max-w-4xl">
-            <h1
-              className={`text-3xl md:text-4xl leading-[41px] font-medium font-serif text-[#234a56] mb-6 ${vollkorn.className} antialiased`}
-            >
-              {/* Capture Your Best Moments in Croatia */}
-              {heading}
-            </h1>
-
-            <p
-              className={`text-base text-[#363636] leading-[27px] max-w-3xl ${workSans.className} antialiased font-medium`}
-            >
-              {/* Vacation, engagement, fashion or wedding—your story deserves
-              beautiful photos. I'm a professional photographer in Croatia
-              offering unforgettable photoshoots in Split, Dubrovnik, Hvar,
-              Brač, and more. */}
-              {description}
-            </p>
+            <FadeIn delay={0.4}>
+              <h1
+                className={`text-3xl md:text-4xl leading-[41px] font-medium font-serif text-[#234a56] mb-6 ${vollkorn.className} antialiased`}
+              >
+                {heading}
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.6}>
+              <p
+                className={`text-base text-[#363636] leading-[27px] max-w-3xl ${workSans.className} antialiased font-medium`}
+              >
+                {description}
+              </p>
+            </FadeIn>
           </div>
         </div>
       </section>
-      <BackgroundRippleEffect />
+      {/* <BackgroundRippleEffect /> */}
     </section>
   );
 }

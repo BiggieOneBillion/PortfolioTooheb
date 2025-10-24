@@ -116,6 +116,7 @@ export function dotPatchToNested(patch: Patch): Record<string, any> {
   return out;
 }
 
+
 export function patchToSet(patch: Patch): Record<string, any> {
   // if patch is empty
   if (!patch || Object.keys(patch).length === 0) return {};

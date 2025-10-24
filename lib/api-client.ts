@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  // baseURL: `${process.env.NEXT_PUBLIC_API_URL}/api"`,
-  baseURL: `api`,
+  baseURL: `${process.env.NEXT_PUBLIC_API_URL}/api`,
+  // baseURL: `api`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -26,7 +26,7 @@ apiClient.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401) {
       // Handle unauthorized access
-      console.log("[v0] Unauthorized access detected");
+      // console.log("[v0] Unauthorized access detected");
     }
     return Promise.reject(error);
   }

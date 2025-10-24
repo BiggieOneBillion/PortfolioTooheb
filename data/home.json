@@ -1,0 +1,118 @@
+{
+  "_id": {
+    "$oid": "68ee91d5118736e45341c044"
+  },
+  "mobile": {
+    "hero": {
+      "title": ["Framing timeless", "Stories "],
+      "animatedWords": ["weddings", "portraits", "landscapes", "celebrations"],
+      "carouselImages": [
+        "https://picsum.photos/id/10/1000",
+        "https://picsum.photos/id/12/1000",
+        "https://picsum.photos/id/13/1000"
+      ]
+    },
+    "description": {
+      "heading": "Your moments. My lens. Pure art. Capture Your Best Moments",
+      "text": "Vacation, engagement, fashion or wedding, your story deserves beautiful photos. I'm a professional photographer in Abuja offering unforgettable photoshoots all over the country. Book your photographer today.",
+      "images": [
+        "https://picsum.photos/id/105/1000",
+        "https://picsum.photos/id/125/1000"
+      ]
+    },
+    "cta": {
+      "heading": "Abuja Finnest. Photographer At Your Service",
+      "services": [
+        {
+          "title": "Web Development",
+          "description": "We create responsive, high-performance websites tailored to your brand."
+        },
+        {
+          "title": "Mobile App Development",
+          "description": "We develop intuitive mobile apps for both Android and iOS platforms."
+        },
+        {
+          "title": "UI/UX Design",
+          "description": "We design user experiences that are both engaging and easy to use."
+        }
+      ]
+    },
+    "photoGrid": {
+      "images": [
+        "https://picsum.photos/id/1/1000",
+        "https://picsum.photos/id/2/1000",
+        "https://picsum.photos/id/3/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000",
+        "https://picsum.photos/id/4/1000"
+      ]
+    }
+  },
+  "desktop": {
+    "hero": {
+      "leftImage": "https://picsum.photos/id/50/1000",
+      "centerImage": "https://picsum.photos/id/51/1000",
+      "rightImage": "https://picsum.photos/id/52/1000",
+      "heading": "Capture Your Best Moments in Abuja",
+      "description": "Vacation, engagement, fashion or wedding—your story deserves beautiful photos. I'm a professional photographer in Croatia offering unforgettable photoshoots in Split, Dubrovnik, Hvar, Brač, and more."
+    },
+    "cta": {
+      "heading": "Our Core Expertise",
+      "services": [
+        {
+          "title": "Couple & Engagement Photography",
+          "description": "Planning a surprise proposal or a romantic getaway? Book your engagement photoshoot in Croatia and let's capture your love with dramatic sunsets, cobblestone streets, and sea views.",
+          "_id": {
+            "$oid": "68f4ca3014412782afb6293a"
+          }
+        },
+        {
+          "title": "Family Vacation Photoshoots",
+          "description": "Create lasting memories with your loved ones. I offer fun, relaxed family beach photography in Croatia, perfect for your holiday album.",
+          "_id": {
+            "$oid": "68f4ca3014412782afb6293b"
+          }
+        },
+        {
+          "title": "Friends & Group Sessions",
+          "description": "Whether it's a birthday trip, bachelorette party, or a best-friends adventure, a professional group photoshoot in Croatia will make it unforgettable.",
+          "_id": {
+            "$oid": "68f4ca3014412782afb6293c"
+          }
+        },
+        {
+          "title": "Wedding & Elopement Photography",
+          "description": "Getting married in Croatia. I specialize in small weddings and elopements in stunning locations like Split, Vis, or Dubrovnik. Let's create timeless wedding memories together."
+        }
+      ],
+      "leftImage": "https://picsum.photos/id/65/1000",
+      "rightImage": "https://picsum.photos/id/67/1000"
+    },
+    "gallery": {
+      "images": [
+        "https://picsum.photos/id/5/1000",
+        "https://picsum.photos/id/6/1000",
+        "https://picsum.photos/id/7/1000",
+        "https://picsum.photos/id/8/1000"
+      ]
+    },
+    "imageGallery": {
+      "image1": "https://picsum.photos/id/265/1000",
+      "image2": "https://picsum.photos/id/165/1000",
+      "image3": "https://picsum.photos/id/75/1000",
+      "image4": "https://picsum.photos/id/45/1000",
+      "image5": "https://picsum.photos/id/35/1000",
+      "image6": "https://picsum.photos/id/115/1000",
+      "image7": "https://picsum.photos/id/117/1000",
+      "image8": "https://picsum.photos/id/118/1000",
+      "image9": "https://picsum.photos/id/119/1000"
+    }
+  },
+  "updatedAt": "2025-10-14T17:00:00.000Z"
+}

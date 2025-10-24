@@ -129,7 +129,7 @@
 
 .animate-navbar {
   animation-name: navSlide;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   animation-delay: 0.1s;
@@ -142,9 +142,9 @@
   }
 }
 
-
 @theme inline {
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 
   @keyframes scroll {
     to {
@@ -164,12 +164,11 @@
 .herosection-scroll > div {
   scroll-snap-align: center;
   width: 300px;
-
 }
 
 @theme inline {
   --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
-  var(--delay, 0ms);
+    var(--delay, 0ms);
 
   @keyframes cell-ripple {
     0% {
@@ -184,3 +183,19 @@
   }
 }
 
+.image-con {
+  overflow: hidden;
+}
+
+.image-con > img {
+  scale: 1;
+  transition: scale;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.image-con:hover > img {
+  scale: 1.05;
+  transform-origin: right;
+
+}

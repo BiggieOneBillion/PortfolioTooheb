@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Vollkorn, Courier_Prime } from "next/font/google";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/use-auth";
+import { Loader2, LogOut } from "lucide-react";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
@@ -17,6 +20,8 @@ const courierPrime = Courier_Prime({
 });
 
 export default function DesktopNav() {
+  const { session, isLoading, isAuthenticated, logout, isLoggingOut } =
+      useAuth();
   return (
     <header className="bg-[#ede4d2]">
       <nav className="w-[90%] mx-auto px-6 md:px-10 lg:px-16y py-6 flex items-center justify-between relative z-[1000]">
@@ -27,7 +32,7 @@ export default function DesktopNav() {
             className="text-[#234a56] font-medium tracking-wider text-lg md:text-xl"
           >
             <span className="block font-serif text-2xl md:text-3xl">
-              TOOHEB
+              BREAKPOINT
             </span>
             <span className="block text-sm md:text-base">PORTRAITS</span>
           </a>
@@ -49,6 +54,24 @@ export default function DesktopNav() {
           <Link href="contact" className="hover:underline">
             Contact
           </Link>
+            {/* <Button
+            variant="outline"
+            onClick={logout}
+            disabled={isLoggingOut}
+            className="bg-white"
+          >
+            {isLoggingOut ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Logging out...
+              </>
+            ) : (
+              <>
+                <LogOut className="mr-2 h-4 w-4" />
+                Logout
+              </>
+            )}
+          </Button> */}
         </div>
       </nav>
     </header>

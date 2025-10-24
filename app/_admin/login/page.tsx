@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import axios from "axios";
 
 export default function AdminLoginPage() {
   const [password, setPassword] = useState("");

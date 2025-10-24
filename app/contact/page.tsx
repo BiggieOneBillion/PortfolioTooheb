@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import ContactView from "../_components/mobile-view/contact";
 import ContactSection from "../_components/desktop-view/contact/contact-form";
@@ -19,7 +19,7 @@ const ContactPage = () => {
   }, [contactData]);
 
   if (isLoadingContactData) {
-    return <p className="text-center">Loading pp....</p>;
+    return <p className="text-center">Loading....</p>;
   }
 
   return (

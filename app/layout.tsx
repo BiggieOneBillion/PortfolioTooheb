@@ -36,11 +36,11 @@ export default function RootLayout({
       <body className={`${inter.variable}  antialiased bg-[#ede4d2]`}>
         <Providers>
           {/* Desktop navigation: hidden on small screens, visible on md+ */}
-          <nav className="hidden md:block">
+          <nav className="hidden xl:block">
             <DesktopNav />
           </nav>
           {/* Mobile navigation: visible on small screens, hidden on md+ */}
-          <nav className="block md:hidden">
+          <nav className="block xl:hidden">
             <MobileNavbar />
           </nav>
           {children}

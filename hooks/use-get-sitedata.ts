@@ -9,14 +9,19 @@ const useGetSiteData = () => {
       const response = await apiClient.get("/content/contact");
       return response.data.data;
     },
+    staleTime: 100000,
+    refetchOnWindowFocus: false,
   });
 
   const { data: homeData, isLoading: isLoadingHomeData } = useQuery({
     queryKey: ["home-content"],
     queryFn: async () => {
       const response = await apiClient.get("/content/home");
+      console.log("HOME DATA", response.data.data);
       return response.data.data;
     },
+    staleTime: 100000,
+    refetchOnWindowFocus: false,
   });
 
   const { data: aboutData, isLoading: isLoadingAboutData } = useQuery({
@@ -25,6 +30,8 @@ const useGetSiteData = () => {
       const response = await apiClient.get("/content/about");
       return response.data.data;
     },
+    staleTime: 100000,
+    refetchOnWindowFocus: false,
   });
 
   return {

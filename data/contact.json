@@ -1,0 +1,26 @@
+{
+  "_id": {
+    "$oid": "68f479a9b24ef0f13a09e143"
+  },
+  "mobile": {
+    "heading": "Get in touch / Ask a question",
+    "image": "https://picsum.photos/1000/1000?random=301",
+    "paragraphs": [
+      "Whether you're planning a romantic escape, a family holiday, or a once-in-a-lifetime celebration in beautiful Croatia — I'd love to hear from you!",
+      "Tell me a bit about your story, your plans, and the kind of photos you're dreaming of. I'll get back to you as soon as possible with all the info you need.",
+      "Just fill out the contact form or drop me a message — let's create something beautiful together.",
+      "Available all along the coast and the islands. I can't wait to capture your moments!"
+    ]
+  },
+  "desktop": {
+    "heading": "Get in touch / Ask a question",
+    "image": "https://picsum.photos/1000/1000?random=302",
+    "paragraphs": [
+      "Whether you're planning a romantic escape, a family holiday, or a once-in-a-lifetime celebration in beautiful Croatia — I'd love to hear from you!",
+      "Tell me a bit about your story, your plans, and the kind of photos you're dreaming of. I'll get back to you as soon as possible with all the info you need.",
+      "Just fill out the contact form or drop me a message — let's create something beautiful together.",
+      "Available all along the coast and the islands."
+    ]
+  },
+  "updatedAt": "2025-10-14T17:00:00.000Z"
+}
